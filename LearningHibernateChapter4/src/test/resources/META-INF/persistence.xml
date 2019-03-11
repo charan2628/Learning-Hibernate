@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+             
+	<persistence-unit name="org.learning.hibernate.chapter4">
+		<class>org.learning.hibernate.model.Item</class>
+		<class>org.learning.hibernate.model.Bid</class>
+		<class>org.learning.hibernate.model.User</class>
+		<class>org.learning.hibernate.model.Addresss</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/learning_hibernate" />
+			<property name="javax.persistence.jdbc.user" value="saber" />
+			<property name="javax.persistence.jdbc.password" value="saber" />
+			
+<!-- 			<property name="hibernate.physical_naming_strategy" value="org.learning.hibernate.shared.SCNamingStatergy" /> -->
+			
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL57Dialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+	</persistence-unit>
+             
+</persistence>
