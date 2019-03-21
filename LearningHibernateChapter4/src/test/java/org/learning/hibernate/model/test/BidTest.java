@@ -1,7 +1,5 @@
 package org.learning.hibernate.model.test;
 
-import static org.junit.Assert.assertNotEquals;
-
 import java.math.BigDecimal;
 import java.util.List;
 
