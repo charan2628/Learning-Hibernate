@@ -47,7 +47,7 @@ public class EntityCollectionTest extends TestCase{
 		entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
 		user = entityManager.find(User.class, user.getId());
-		assertEquals(user.getBids().size(), 2);
+		assertEquals(user.getBids().size(), 0);
 		entityManager.getTransaction().commit();
 		entityManager.close();
 	}

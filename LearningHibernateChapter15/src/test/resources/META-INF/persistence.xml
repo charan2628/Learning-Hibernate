@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0">
 
-	<persistence-unit name="concurrency">
-		<class>org.learning.hibernate.concurrency.Item</class>
-		<class>org.learning.hibernate.concurrency.User</class>
-
+	<persistence-unit name="polymorphicqueries">
+		<class>org.learning.hibernate.queries.BankAccount</class>
+	<class>org.learning.hibernate.queries.CreditCard</class>
+	<class>org.learning.hibernate.queries.BillingDetails</class>
+	<class>org.learning.hibernate.queries.Item</class>
+	<class>org.learning.hibernate.queries.Bid</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 
 		<properties>
@@ -26,5 +27,5 @@
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 		</properties>
 	</persistence-unit>
-
+	
 </persistence>

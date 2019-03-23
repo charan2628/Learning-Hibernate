@@ -5,10 +5,9 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0">
 
-	<persistence-unit name="concurrency">
-		<class>org.learning.hibernate.concurrency.Item</class>
-		<class>org.learning.hibernate.concurrency.User</class>
-
+	<persistence-unit name="entityproxy">
+		<class>org.learning.hibernate.entityproxies.Item</class>
+		<class>org.learning.hibernate.entityproxies.User</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 
 		<properties>
@@ -27,4 +26,20 @@
 		</properties>
 	</persistence-unit>
 
+	<persistence-unit name="lazyloading">
+		<class>org.learning.hibernate.lazyloading.Item</class>
+		<class>org.learning.hibernate.lazyloading.Bid</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Learning_Hibernate" />
+			<property name="javax.persistence.jdbc.user" value="saber" />
+			<property name="javax.persistence.jdbc.password" value="saber" />
+			
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL57Dialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+	</persistence-unit>
 </persistence>
